@@ -1,8 +1,19 @@
-export function App() {
+import { Route, Routes } from 'react-router-dom';
+import { DashboardPage } from '../pages/Dashboard';
+
+function App() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <div>
+            <h1>Hello, World!</h1>
+          </div>
+        }
+      ></Route>
+      <Route path="/dashboard" element={<DashboardPage />}></Route>
+    </Routes>
   );
 }
 
