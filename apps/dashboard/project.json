@@ -4,6 +4,19 @@
   "sourceRoot": "apps/dashboard/src",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project dashboard --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "outputPath": "dist/apps/dashboard",
+        "configFile": "apps/dashboard/vite.config.ts"
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "configFile": "apps/dashboard/vite.config.ts"
+      }
+    }
+  }
 }
