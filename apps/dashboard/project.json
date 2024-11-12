@@ -5,8 +5,10 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project dashboard --web",
-  "deploy": {
-    "dependsOn": ["build"],
-    "command": "netlify deploy --dir=dist/dashboard"
+  "targets": {
+    "deploy": {
+      "dependsOn": ["build"],
+      "command": "netlify deploy --dir=dist/react-store"
+    }
   }
 }
